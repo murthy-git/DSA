@@ -9,6 +9,6 @@ public class NaryNode {
 
     public NaryNode(int data){
         this.data = data;
-        this.children = null;
+        this.children = new ArrayList<>();
     }
 }

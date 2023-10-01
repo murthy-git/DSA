@@ -8,23 +8,16 @@ import java.util.Queue;
 public class NaryTreeTraversal {
     public void preOrderTraversal(NaryNode node){
         System.out.println(node.data);
-        if (node.children != null){
-            for(NaryNode child: node.children){
-                preOrderTraversal(child);
-            }
+        for(NaryNode child: node.children){
+            preOrderTraversal(child);
         }
     }
 
     public void postOderTraversal(NaryNode node){
-        if (node.children != null){
-            for(NaryNode child: node.children){
-                postOderTraversal(child);
-            }
-            System.out.println(node.data);
+        for(NaryNode child: node.children){
+            postOderTraversal(child);
         }
-        else {
-            System.out.println(node.data);
-        }
+        System.out.println(node.data);
     }
 
     public void levelOrderTraversal(NaryNode node){
@@ -33,9 +26,7 @@ public class NaryTreeTraversal {
         while (!queue.isEmpty()){
             NaryNode current_node = queue.poll();
             System.out.println(current_node.data);
-            if(current_node.children != null){
-                queue.addAll(current_node.children);
-            }
+            queue.addAll(current_node.children);
         }
     }
 
@@ -47,9 +38,7 @@ public class NaryTreeTraversal {
             for(int i = 0; i < current_queue_length; i++){
                 NaryNode current_node = queue.poll();
                 System.out.print(String.valueOf(current_node.data) + ' ');
-                if(current_node.children != null){
-                    queue.addAll(current_node.children);
-                }
+                queue.addAll(current_node.children);
             }
             System.out.println();
         }
