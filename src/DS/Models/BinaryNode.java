@@ -1,10 +1,10 @@
 package DS.Models;
 
-public class Node {
+public class BinaryNode {
     public int data;
-    public Node left, right;
+    public BinaryNode left, right;
 
-    public Node(int data){
+    public BinaryNode(int data){
         this.data = data;
         this.left = null;
         this.right = null;
